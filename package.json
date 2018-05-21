@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "nerds",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aliciaketzueki/Nerds.git"
@@ -20,19 +17,31 @@
   },
   "homepage": "https://github.com/aliciaketzueki/Nerds#readme",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "autoprefixer": "^8.5.0",
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
     "gulp-plumber": "^1.2.0",
-    "gulp-postcss": "^7.0.1"
-  },
-  "dependencies": {
-    "gulp-less": "^3.5.0"
+    "gulp-postcss": "^7.0.1",
+    "stylelint": "^9.2.1",
+    "stylelint-config-htmlacademy": "^0.1.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
     "start": "gulp serve"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/scripts.js",
+    "source/img/**/*.svg",
+    "source/less/**/*.less"
+  ],
+  "dependencies": {
+    "gulp-less": "^3.5.0",
+    "normalize.less": "^1.0.0"
   }
 }
