@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roboto";
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
   src: url("../fonts/Roboto-Regular.ttf") format("ttf");
@@ -8,13 +8,24 @@
 
 @font-face {
   font-family: "Roboto";
-  font-weight: bold;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Roboto-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
   src: url("../fonts/Roboto-Bold.ttf") format("ttf");
 }
 
 @import "node_modules/normalize.less/normalize.less";
+@import url("global.less");
 @import url("mixins.less");
 @import url("variables.less");
+
+@import url("blocks/page-wrapper.less");
 @import url("blocks/header.less");
