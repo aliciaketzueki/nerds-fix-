@@ -1,0 +1,14 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+	name = Aliciaketzueki
+	email = aliciaketzueki@gmail.com
+[core]
+	autocrlf = true
+	excludesfile = C:\\Users\\Orochimaru-sama\\Documents\\gitignore_global.txt
+	safecrlf = true
+[merge]
+	tool = vscode
