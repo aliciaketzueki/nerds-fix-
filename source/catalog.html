@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/css/style.css">
   <title>Nerds</title>
 </head>
-
 <body>
   <header class="header">
     <nav class="header__navigation">
@@ -36,7 +34,70 @@
     </nav>
   </header>
   <main class="main">
-
+    <header class="main__header main-header">
+      <h2 class="main-header__title">Магазин готовых шаблонов</h2>
+    </header>
+    <section class="main__form form">
+      <h2 class="visually-hidden">Фильтр товаров</h2>
+      <form class="form__form-field" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset>
+          <div class="form__range">
+            <button class="form__range-button form__range-button--min" type="button">min</button>
+            <button class="form__range-button form__range-button--max" type="button">max</button>
+          </div>
+          <div class="form__cost">
+            <legend class="form__title">Стоимость:</legend>
+            <label class="form__label" for="from">От</label>
+            <input type="number" name="cost-from" id="from" value="0">
+            <label class="form__label" for="to">До</label>
+            <input type="number" name="cost-to" id="to" value="15000">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="form__title">Сетка:</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <input class="form__radio" type="radio" name="grid" id="adaptive" checked>
+              <label class="form__label" for="adaptive">Адаптивная</label>
+            </li>
+            <li class="form__item">
+              <input class="form__radio" type="radio" name="grid" id="fix">
+              <label class="form__label" for="fix">Фиксированная</label>
+            </li>
+            <li class="form__item">
+              <input class="form__radio" type="radio" name="grid" id="resp">
+              <label class="form__label" for="resp">Резиновая</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend class="form__title">Особенности:</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <input class="form__checkbox" type="checkbox" name="slider" id="slider" checked>
+              <label class="form__label" for="slider">Слайдер</label>
+            </li>
+            <li class="form__item">
+              <input class="form__checkbox" type="checkbox" name="advantages" id="advantages">
+              <label class="form__label" for="advantages">Блок преимуществ</label>
+            </li>
+            <li class="form__item">
+              <input class="form__checkbox" type="checkbox" name="news" id="news" checked>
+              <label class="form__label" for="news">Новости</label>
+            </li>
+            <li class="form__item">
+              <input class="form__checkbox" type="checkbox" name="gallery" id="gallery">
+              <label class="form__label" for="gallery">Галерея</label>
+            </li>
+            <li class="form__item">
+              <input class="form__checkbox" type="checkbox" name="cart" id="cart">
+              <label class="form__label" for="cart">Корзина</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="form__button" type="submit">Показать</button>
+      </form>
+    </section>
   </main>
   <footer class="footer">
     <section class="footer__map map">
