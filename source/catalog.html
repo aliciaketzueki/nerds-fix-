@@ -45,58 +45,66 @@
         <section class="main__form form">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form class="form__form-field" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset>
+            <fieldset class="form__block">
+              <legend class="form__title">Стоимость:</legend>
               <div class="form__range">
-                <button class="form__range-button form__range-button--min" type="button">min</button>
-                <button class="form__range-button form__range-button--max" type="button">max</button>
+                <button class="form__range-button form__range-button--min" type="button">
+                  <svg width="20" height="23">
+                    <use xlink:href="img/sprite.svg#filter-button"></use>
+                  </svg>
+                </button>
+                <button class="form__range-button form__range-button--max" type="button">
+                  <svg width="20" height="23">
+                    <use xlink:href="img/sprite.svg#filter-button"></use>
+                  </svg>
+                </button>
               </div>
               <div class="form__cost">
-                <legend class="form__title">Стоимость:</legend>
-                <label class="form__label" for="from">От</label>
-                <input type="number" name="cost-from" id="from" value="0">
-                <label class="form__label" for="to">До</label>
-                <input type="number" name="cost-to" id="to" value="15000">
+                <label class="form__label form__label--cost" for="from">От</label>
+                <input class="form__input-cost" type="number" name="cost-from" id="from" value="0">
+                <label class="form__label form__label--cost" for="to">До</label>
+                <input class="form__input-cost" type="number" name="cost-to" id="to" value="15000">
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="form__block">
               <legend class="form__title">Сетка:</legend>
               <ul class="form__list">
                 <li class="form__item">
                   <input class="form__radio" type="radio" name="grid" id="adaptive" checked>
-                  <label class="form__label" for="adaptive">Адаптивная</label>
+                  <label class="form__label form__label--radio" for="adaptive">Адаптивная</label>
                 </li>
                 <li class="form__item">
                   <input class="form__radio" type="radio" name="grid" id="fix">
-                  <label class="form__label" for="fix">Фиксированная</label>
+                  <label class="form__label form__label--radio" for="fix">Фиксированная</label>
                 </li>
                 <li class="form__item">
                   <input class="form__radio" type="radio" name="grid" id="resp">
-                  <label class="form__label" for="resp">Резиновая</label>
+                  <label class="form__label form__label--radio" for="resp">Резиновая</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="form__block form__block--checkbox">
               <legend class="form__title">Особенности:</legend>
               <ul class="form__list">
                 <li class="form__item">
                   <input class="form__checkbox" type="checkbox" name="slider" id="slider" checked>
-                  <label class="form__label" for="slider">Слайдер</label>
+                  <label class="form__label form__label--checkbox" for="slider">Слайдер</label>
                 </li>
                 <li class="form__item">
                   <input class="form__checkbox" type="checkbox" name="advantages" id="advantages">
-                  <label class="form__label" for="advantages">Блок преимуществ</label>
+                  <label class="form__label form__label--checkbox" for="advantages">Блок преимуществ</label>
                 </li>
                 <li class="form__item">
                   <input class="form__checkbox" type="checkbox" name="news" id="news" checked>
-                  <label class="form__label" for="news">Новости</label>
+                  <label class="form__label form__label--checkbox" for="news">Новости</label>
                 </li>
                 <li class="form__item">
                   <input class="form__checkbox" type="checkbox" name="gallery" id="gallery">
-                  <label class="form__label" for="gallery">Галерея</label>
+                  <label class="form__label form__label--checkbox" for="gallery">Галерея</label>
                 </li>
                 <li class="form__item">
                   <input class="form__checkbox" type="checkbox" name="cart" id="cart">
-                  <label class="form__label" for="cart">Корзина</label>
+                  <label class="form__label form__label--checkbox" for="cart">Корзина</label>
                 </li>
               </ul>
             </fieldset>
