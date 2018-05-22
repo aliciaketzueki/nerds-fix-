@@ -327,6 +327,12 @@ body {
   line-height: 24px;
   background-color: white;
 }
+img {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -415,11 +421,12 @@ body {
 }
 .main__about-us {
   padding-top: 40px;
-  padding-bottom: 75px;
+  padding-bottom: 45px;
   border-bottom: 2px solid #eeeeee;
 }
 .main__projects {
-  padding: 45px 0;
+  padding-top: 45px;
+  padding-bottom: 40px;
   border-bottom: 2px solid #eeeeee;
 }
 /*----index.html-----*/
@@ -583,6 +590,9 @@ body {
 .about-us__offers {
   width: 660px;
   padding-top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .about-us__title {
   margin: 0;
@@ -594,6 +604,7 @@ body {
 .about-us__description {
   margin: 0;
   font-weight: 400;
+  padding-top: 32px;
 }
 .about-us__head {
   margin: 0;
@@ -601,6 +612,7 @@ body {
   font: inherit;
   font-weight: 700;
   text-transform: uppercase;
+  padding-top: 40px;
 }
 .about-us__list {
   list-style: none;
@@ -611,6 +623,7 @@ body {
   font-weight: 400;
   color: #283136;
   padding-left: 37px;
+  padding-top: 24px;
   position: relative;
 }
 .about-us__item::before {
@@ -624,12 +637,42 @@ body {
   bottom: 10px;
 }
 .about-us__stats {
-  width: 400px;
+  width: 360px;
   background-image: url("../img/nerds-illustration.png");
   background-repeat: no-repeat;
   background-size: 360px 208px;
   background-position: top right;
-  padding-top: 208px;
+  padding-top: 203px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-us__table {
+  padding-top: 40px;
+}
+.about-us__table tr {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 65px;
+}
+.about-us__table td {
+  width: 33%;
+  padding: 0;
+}
+.about-us__percent {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+}
+.about-us__percent sup {
+  font-size: 25px;
+  padding-bottom: 30px;
+}
+.about-us__field {
+  line-height: 18px;
+  font-weight: 400;
+  padding-top: 35px;
 }
 .projects__list {
   list-style: none;
@@ -642,14 +685,27 @@ body {
   align-items: center;
 }
 .projects__item {
-  width: 25%;
-  text-align: center;
+  width: 260px;
+  vertical-align: middle;
 }
 .projects__link {
   display: block;
   text-decoration: none;
   color: black;
   font: inherit;
+  opacity: 0.2;
+  text-align: center;
+}
+.projects__link:hover {
+  transition-duration: 0.5s;
+  opacity: 1;
+}
+.projects__link:active {
+  transition-duration: 0.5s;
+  opacity: 0.1;
+}
+.projects__link img {
+  text-align: center;
 }
 /*----catalog.html----*/
 .main-header {
