@@ -1,6 +1,5 @@
 .form {
   width: 260px;
-  margin-top: 55px;
 }
 
 .form__block {
@@ -8,7 +7,10 @@
   border: 0;
   padding: 0;
   margin: 0;
-  margin-top: 55px;
+  
+  &--radio {
+    margin-top: 55px;
+  }
 
   &--checkbox {
     margin-top: 45px;
@@ -35,6 +37,7 @@
 .form__range-button {
   .button();
   background-color: transparent;
+  cursor: pointer;
 }
 
 .form__cost {
@@ -153,4 +156,5 @@
   border-color: @grey;
   margin-top: 48px;
   width: 100%;
+  cursor: pointer;
 }

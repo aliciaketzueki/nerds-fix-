@@ -41,7 +41,7 @@
       <header class="main__header main-header">
         <h2 class="main-header__title">Магазин готовых шаблонов</h2>
       </header>
-      <div class="page-wrapper">
+      <div class="page-wrapper page-wrapper--form">
         <section class="main__form form">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form class="form__form-field" action="https://echo.htmlacademy.ru/" method="post">
@@ -66,7 +66,7 @@
                 <input class="form__input-cost" type="number" name="cost-to" id="to" value="15000">
               </div>
             </fieldset>
-            <fieldset class="form__block">
+            <fieldset class="form__block form__block--radio">
               <legend class="form__title">Сетка:</legend>
               <ul class="form__list">
                 <li class="form__item">
@@ -114,10 +114,10 @@
         <section class="main__products products">
           <h2 class="visually-hidden">Блок товаров</h2>
           <div class="products__sort sort">
-            <p>Сортировать:</p>
+            <h3 class="sort__title">Сортировать:</h3>
             <ul class="sort__list">
               <li class="sort__item">
-                <a class="sort__link" href="#">По цене</a>
+                <a class="sort__link sort__link--active">По цене</a>
               </li>
               <li class="sort__item">
                 <a class="sort__link" href="#">По типу</a>
@@ -126,8 +126,16 @@
                 <a class="sort__link" href="#">По названию</a>
               </li>
               <li class="sort__item">
-                <button class="sort__button sort__button-min" type="button">вверх</button>
-                <button class="sort__button sort__button-max" type="button">вниз</button>
+                <button class="sort__button sort__button--active" type="button">
+                  <svg width="11" height="10">
+                    <use xlink:href="img/sprite.svg#icon-down-dir"></use>
+                  </svg>
+                </button>
+                <button class="sort__button" type="button">
+                  <svg width="11" height="10">
+                    <use xlink:href="img/sprite.svg#icon-up-dir"></use>
+                  </svg>
+                </button>
               </li>
             </ul>
           </div>

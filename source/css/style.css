@@ -349,6 +349,13 @@ img {
   padding: 0 20px;
   box-sizing: border-box;
 }
+.page-wrapper--form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 55px;
+}
 .header {
   background-color: #eeeeee;
 }
@@ -1004,13 +1011,14 @@ img {
 }
 .form {
   width: 260px;
-  margin-top: 55px;
 }
 .form__block {
   font: inherit;
   border: 0;
   padding: 0;
   margin: 0;
+}
+.form__block--radio {
   margin-top: 55px;
 }
 .form__block--checkbox {
@@ -1036,6 +1044,7 @@ img {
   background-color: white;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 .form__cost {
   margin-top: 14px;
@@ -1147,4 +1156,93 @@ img {
   border-color: #eeeeee;
   margin-top: 48px;
   width: 100%;
+  cursor: pointer;
+}
+.products {
+  display: flex;
+  flex-direction: column;
+  width: 760px;
+}
+.products__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.products__link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font: inherit;
+}
+.products__cost {
+  border: 0;
+  background-color: white;
+  padding: 0;
+}
+.sort {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.sort__title {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.sort__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+}
+.sort__link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+}
+.sort__link--active {
+  color: black;
+}
+.sort__link:hover {
+  transition-duration: 0.5s;
+  color: rgba(0, 0, 0, 0.6);
+}
+.sort__link:active {
+  transition-duration: 0.5s;
+  color: #000000;
+}
+.sort__button {
+  border: 0;
+  background-color: white;
+  padding: 0;
+  margin-left: 15px;
+}
+.sort__button svg {
+  fill: #ededed;
+}
+.sort__button--active svg {
+  fill: #010101;
+}
+.sort__button:hover svg {
+  transition-duration: 0.5s;
+  fill: #a6a6a6;
+}
+.sort__button:active svg {
+  transition-duration: 0.5s;
+  fill: #231f20;
 }
