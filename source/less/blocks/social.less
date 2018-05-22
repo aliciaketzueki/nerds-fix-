@@ -23,6 +23,20 @@
   border-radius: 50%;
   position: relative;
   
+  &:hover {
+    .trans();
+    background-color: #e74246;
+  }
+
+  &:active {
+    .trans();
+    background-color: #d7373b;
+  }
+
+  &:active svg {
+    .trans();    
+    fill: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .social__link svg {

@@ -545,6 +545,18 @@ img {
   border-radius: 50%;
   position: relative;
 }
+.social__link:hover {
+  transition-duration: 0.5s;
+  background-color: #e74246;
+}
+.social__link:active {
+  transition-duration: 0.5s;
+  background-color: #d7373b;
+}
+.social__link:active svg {
+  transition-duration: 0.5s;
+  fill: rgba(255, 255, 255, 0.3);
+}
 .social__link svg {
   fill: #ffffff;
   position: absolute;
@@ -573,7 +585,7 @@ img {
   width: 960px;
   min-height: 590px;
   padding: 84px 100px;
-  padding-top: 70px;
+  padding-top: 68px;
   box-sizing: border-box;
   bottom: 180px;
   left: 50%;
@@ -606,8 +618,14 @@ img {
   width: 21px;
   height: 21px;
 }
+.modal__close:hover svg {
+  opacity: 1;
+}
+.modal__close:active svg {
+  opacity: 0.1;
+}
 .modal__close svg {
-  fill: #fb565a;
+  opacity: 0.3;
 }
 .modal__list {
   list-style: none;
@@ -633,18 +651,36 @@ img {
   width: 360px;
   height: 50px;
   box-sizing: border-box;
-  border: 2px solid #eeeeee;
+  border: 2px solid #d7dcde;
   border-radius: 2px;
   padding-left: 14px;
+  margin-top: 6px;
+}
+.modal__input:hover {
+  transition-duration: 0.5s;
+  border-color: #b4b9bb;
+}
+.modal__input:focus {
+  outline: none;
+  border-color: #000000;
 }
 .modal__textarea {
   width: 100%;
   height: 118px;
   box-sizing: border-box;
-  border: 2px solid #eeeeee;
+  border: 2px solid #d7dcde;
   border-radius: 2px;
   padding-left: 14px;
-  padding-top: 14px;
+  padding-top: 10px;
+  margin-top: 7px;
+}
+.modal__textarea:hover {
+  transition-duration: 0.5s;
+  border-color: #b4b9bb;
+}
+.modal__textarea:focus {
+  outline: none;
+  border-color: #000000;
 }
 .modal__button {
   width: 240px;
@@ -658,7 +694,20 @@ img {
   text-transform: uppercase;
   font: inherit;
   line-height: 18px;
-  margin-top: 47px;
+  margin-top: 40px;
+  width: 260px;
+  cursor: pointer;
+}
+.modal__button:hover {
+  transition-duration: 0.5s;
+  background-color: #e74246;
+  border-color: #e74246;
+}
+.modal__button:active {
+  transition-duration: 0.5s;
+  background-color: #d7373b;
+  border-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
 }
 /*----index.html-----*/
 .slider__list {

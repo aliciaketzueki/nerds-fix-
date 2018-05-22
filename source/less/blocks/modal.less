@@ -5,7 +5,7 @@
   width: 960px;
   min-height: 590px;
   padding: 84px 100px;
-  padding-top: 70px;
+  padding-top: 68px;
   box-sizing: border-box;
   bottom: 180px;
   left: 50%;
@@ -35,10 +35,18 @@
   top: 78px;
   width: 21px;
   height: 21px;
+
+  &:hover svg {
+    opacity: 1;
+  }
+
+  &:active svg {
+    opacity: 0.1;
+  }
 }
 
 .modal__close svg {
-  fill: @red;
+  opacity: 0.3;
 }
 
 .modal__list {
@@ -67,22 +75,59 @@
   width: 360px;
   height: 50px;
   box-sizing: border-box;
-  border: 2px solid @grey;
+  border: 2px solid #d7dcde;
   border-radius: 2px;
   padding-left: 14px;
+  margin-top: 6px;
+
+  &:hover {
+    .trans();
+    border-color: #b4b9bb;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #000000;
+  }
 }
 
 .modal__textarea {
   width: 100%;
   height: 118px;
   box-sizing: border-box;
-  border: 2px solid @grey;
+  border: 2px solid #d7dcde;
   border-radius: 2px;
   padding-left: 14px;
-  padding-top: 14px;
+  padding-top: 10px;
+  margin-top: 7px;
+
+  &:hover {
+    .trans();
+    border-color: #b4b9bb;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #000000;
+  }
 }
 
 .modal__button {
   .main-button();
-  margin-top: 47px;
+  margin-top: 40px;
+  width: 260px;
+  cursor: pointer;
+
+  &:hover {
+    .trans();
+    background-color: #e74246;
+    border-color: #e74246;
+  }
+
+  &:active {
+    .trans();
+    background-color: #d7373b;
+    border-color: #d7373b;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }

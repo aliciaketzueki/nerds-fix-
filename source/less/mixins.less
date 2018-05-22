@@ -40,3 +40,24 @@
 .trans() {
   transition-duration: 0.5s;
 }
+
+.focus-red() {
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 0 5px 1px @red;
+  }
+}
+
+.focus-green() {
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 0 5px 1px @green;
+  }
+}
+
+.focus-yellow() {
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 0 5px 1px @yellow;
+  }
+}
