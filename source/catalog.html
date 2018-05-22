@@ -198,25 +198,41 @@
     <footer class="footer">
       <section class="footer__map map">
         <h2 class="visually-hidden">Карта</h2>
-        <section class="map__contacts">
-          <h3 class="map__title">Nёrds design studio</h3>
-          <p class="map__adds">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p class="map__tel">тел. +7 (812) 275-75-75</p>
-          <button class="map__button" type="button">Напишите нам</button>
-        </section>
+        <img class="map__img" src="img/map.png" width="1440" height="785" alt="Карта">
+        <div class="map__container"></div>
+        <div class="page-wrapper">
+          <section class="map__contacts">
+            <h3 class="map__title">Nёrds design studio</h3>
+            <p class="map__adds">191186, Санкт-Петербург, ул.&nbsp;Б. Конюшенная, д. 19/8</p>
+            <p class="map__tel">тел. +7 (812) 275-75-75</p>
+            <button class="map__button" type="button">Напишите нам</button>
+          </section>
+        </div>
       </section>
       <div class="page-wrapper">
         <section class="footer__social social">
           <h2 class="visually-hidden">Мы в соц.сетях</h2>
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link" href="#">vk</a>
+              <a class="social__link" href="#">
+                <svg width="26" height="15">
+                  <use xlink:href="img/sprite.svg#vk-icon"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#">fb</a>
+              <a class="social__link" href="#">
+                <svg width="12" height="22">
+                  <use xlink:href="img/sprite.svg#fb-icon"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#">insta</a>
+              <a class="social__link" href="#">
+                <svg width="21" height="21">
+                  <use xlink:href="img/sprite.svg#insta-icon"></use>
+                </svg>
+              </a>
             </li>
           </ul>
           <div class="social__block">
@@ -248,5 +264,6 @@
       </form>
     </section>
     <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAFpk8cXb_9F7bdJnh3YFeoJW1VQr8f6U&callback=initMap"></script>
   </body>
 </html>

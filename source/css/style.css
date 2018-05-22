@@ -429,6 +429,142 @@ img {
   padding-bottom: 40px;
   border-bottom: 2px solid #eeeeee;
 }
+.footer {
+  padding-top: 80px;
+}
+.map {
+  background-color: #b5b5b5;
+  height: 416px;
+  overflow: hidden;
+  position: relative;
+}
+.map__img {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+.map__container {
+  z-index: 2;
+  width: 100%;
+  height: 416px;
+}
+.map__contacts {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: white;
+  width: 320px;
+  min-height: 308px;
+  padding: 0 50px;
+  padding-bottom: 47px;
+  padding-top: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #666666;
+  line-height: 18px;
+}
+.map__title {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+.map__adds {
+  margin: 0;
+}
+.map__tel {
+  margin: 0;
+}
+.map__button {
+  width: 240px;
+  border: 2px solid #fb565a;
+  border-radius: 5px;
+  padding: 14px 0;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #fb565a;
+  color: white;
+  text-transform: uppercase;
+  font: inherit;
+  line-height: 18px;
+  width: 100%;
+  margin-top: 18px;
+  cursor: pointer;
+}
+.map__button:hover {
+  transition-duration: 0.5s;
+  background-color: #e74246;
+  border-color: #e74246;
+}
+.map__button:active {
+  transition-duration: 0.5s;
+  background-color: #d7373b;
+  border-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+}
+.social {
+  min-height: 217px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.social__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 260px;
+  margin-right: 140px;
+}
+.social__link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font: inherit;
+  background-color: #e1e1e1;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  position: relative;
+}
+.social__link svg {
+  fill: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.social__friends {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.social__discount {
+  line-height: 22px;
+  font-weight: 400;
+  color: #444444;
+  margin: 0;
+}
 /*----index.html-----*/
 .slider__list {
   list-style: none;
