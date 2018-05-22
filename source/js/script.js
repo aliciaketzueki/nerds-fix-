@@ -22,3 +22,17 @@ function initMap() {
     icon: image
   });
 }
+
+var button = document.querySelector(".map__button");
+var modal = document.querySelector(".modal");
+var closeButton = document.querySelector(".modal__close");
+
+button.addEventListener("click", function(evt) {
+  evt.preventDefault;
+  modal.classList.add("modal--show");
+});
+
+closeButton.addEventListener("click", function(evt) {
+  evt.preventDefault;
+  modal.classList.remove("modal--show");
+});

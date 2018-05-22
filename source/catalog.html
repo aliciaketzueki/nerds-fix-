@@ -241,28 +241,32 @@
           </div>
         </section>
       </div>
+      <section class="modal">
+        <h1 class="modal__title">Напишите нам</h1>
+        <button class="modal__close" type="button">
+          <svg width="21" height="21">
+            <use xlink:href="img/sprite.svg#button-close"></use>
+          </svg>
+        </button>
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+          <ul class="modal__list">
+            <li class="modal__item">
+              <label class="modal__label" for="name">Ваше имя:</label>
+              <input class="modal__input" type="name" name="name" id="name" placeholder="Имя Фамилия" required>
+            </li>
+            <li class="modal__item">
+              <label class="modal__label" for="email">Ваш e-mail:</label>
+              <input class="modal__input" type="email" name="email" id="email" placeholder="email@example.com" required>
+            </li>
+            <li class="modal__item">
+              <label class="modal__label" for="text">Текст письма:</label>
+              <textarea class="modal__textarea" name="text" id="text" placeholder="В свободной форме" required></textarea>
+            </li>
+          </ul>
+          <button class="modal__button" type="submit">Отправить</button>
+        </form>
+      </section>
     </footer>
-    <section class="modal">
-      <h1 class="modal__title">Напишите нам</h1>
-      <button class="modal__close" type="button">X</button>
-      <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
-        <ul class="modal__list">
-          <li class="modal__item">
-            <label class="modal__label" for="name">Ваше имя:</label>
-            <input class="modal__input" type="name" name="name" id="name" placeholder="Имя Фамилия" required>
-          </li>
-          <li class="modal__item">
-            <label class="modal__label" for="email">Ваш e-mail:</label>
-            <input class="modal__input" type="email" name="email" id="email" placeholder="email@example.com" required>
-          </li>
-          <li class="modal__item">
-            <label class="modal__label" for="text">Текст письма</label>
-            <textarea class="modal__textarea" name="text" id="text" placeholder="В свободной форме" required></textarea>
-          </li>
-        </ul>
-        <button class="modal__button" type="submit">Отправить</button>
-      </form>
-    </section>
     <script src="js/script.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAFpk8cXb_9F7bdJnh3YFeoJW1VQr8f6U&callback=initMap"></script>
   </body>
