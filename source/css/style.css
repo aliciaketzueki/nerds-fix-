@@ -357,6 +357,14 @@ body {
   width: 360px;
   margin-bottom: -5px;
 }
+.header__logo-link:hover {
+  opacity: 0.8;
+  transition-duration: 0.5s;
+}
+.header__logo-link:active {
+  opacity: 0.3;
+  transition-duration: 0.5s;
+}
 .header__list {
   list-style: none;
   margin: 0;
@@ -384,17 +392,34 @@ body {
   padding-bottom: 3px;
 }
 .header__link--cart {
-  padding-left: 41px;
+  padding-left: 40px;
   background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
   background-size: 15px 15px;
-  background-position: left bottom 23px;
+  background-position: left bottom 19px;
+}
+.header__link:hover {
+  color: #fb565a;
+  transition-duration: 0.5s;
+}
+.header__link:active {
+  color: rgba(0, 0, 0, 0.3);
+  transition-duration: 0.5s;
 }
 .main__header {
   background-color: #eeeeee;
 }
 .main__pricelist {
   padding: 80px 0;
+  border-bottom: 2px solid #eeeeee;
+}
+.main__about-us {
+  padding-top: 40px;
+  padding-bottom: 75px;
+  border-bottom: 2px solid #eeeeee;
+}
+.main__projects {
+  padding: 45px 0;
   border-bottom: 2px solid #eeeeee;
 }
 /*----index.html-----*/
@@ -452,6 +477,7 @@ body {
   margin: 0;
   padding-right: 740px;
   padding-bottom: 12px;
+  font-weight: 400;
 }
 .slider__link {
   display: block;
@@ -468,6 +494,17 @@ body {
   text-transform: uppercase;
   font: inherit;
   line-height: 18px;
+}
+.slider__link:hover {
+  transition-duration: 0.5s;
+  background-color: #e74246;
+  border-color: #e74246;
+}
+.slider__link:active {
+  transition-duration: 0.5s;
+  background-color: #d7373b;
+  border-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
 }
 .pricelist__list {
   list-style: none;
@@ -512,6 +549,7 @@ body {
   margin: 0;
   padding-bottom: 17px;
   width: 260px;
+  font-weight: 400;
 }
 .pricelist__button {
   width: 240px;
@@ -526,6 +564,7 @@ body {
   font: inherit;
   line-height: 18px;
   width: 160px;
+  cursor: pointer;
 }
 .pricelist__button--green {
   background-color: #00ca74;
@@ -534,6 +573,83 @@ body {
 .pricelist__button--yellow {
   background-color: #efc84a;
   border-color: #efc84a;
+}
+.about-us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.about-us__offers {
+  width: 660px;
+  padding-top: 35px;
+}
+.about-us__title {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 45px;
+  line-height: 45px;
+}
+.about-us__description {
+  margin: 0;
+  font-weight: 400;
+}
+.about-us__head {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.about-us__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.about-us__item {
+  font-weight: 400;
+  color: #283136;
+  padding-left: 37px;
+  position: relative;
+}
+.about-us__item::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
+  position: absolute;
+  left: 1px;
+  bottom: 10px;
+}
+.about-us__stats {
+  width: 400px;
+  background-image: url("../img/nerds-illustration.png");
+  background-repeat: no-repeat;
+  background-size: 360px 208px;
+  background-position: top right;
+  padding-top: 208px;
+}
+.projects__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects__item {
+  width: 25%;
+  text-align: center;
+}
+.projects__link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font: inherit;
 }
 /*----catalog.html----*/
 .main-header {

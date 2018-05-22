@@ -15,6 +15,18 @@
   margin-bottom: -5px;
 }
 
+.header__logo-link {
+  &:hover {
+    opacity: 0.8;
+    .trans();
+  }
+
+  &:active {
+    opacity: 0.3;
+    .trans();
+  }
+}
+
 .header__list {
   .list();
   display: flex;
@@ -40,10 +52,20 @@
   }
 
   &--cart {
-    padding-left: 41px;
+    padding-left: 40px;
     background-image: url("../img/cart-icon.svg");
     background-repeat: no-repeat;
     background-size: 15px 15px;
-    background-position: left bottom 23px;
+    background-position: left bottom 19px;
+  }
+
+  &:hover {
+    color: @red;
+    .trans();
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+    .trans();
   }
 }

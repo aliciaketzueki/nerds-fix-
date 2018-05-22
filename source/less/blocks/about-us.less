@@ -1,0 +1,59 @@
+.about-us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about-us__offers {
+  width: 660px;
+  padding-top: 35px;
+}
+
+.about-us__title {
+  .title();
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.about-us__description {
+  margin: 0;
+  font-weight: 400;
+}
+
+.about-us__head {
+  .title();
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-us__list {
+  .list();
+}
+
+.about-us__item {
+  font-weight: 400;
+  color: @dark-blue;
+  padding-left: 37px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: @red;
+    position: absolute;
+    left: 1px;
+    bottom: 10px;
+  }
+}
+
+.about-us__stats {
+  width: 400px;
+  background-image: url("../img/nerds-illustration.png");
+  background-repeat: no-repeat;
+  background-size: 360px 208px;
+  background-position: top right;
+  padding-top: 208px;
+}
