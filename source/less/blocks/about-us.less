@@ -1,0 +1,101 @@
+.about-us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about-us__offers {
+  width: 660px;
+  padding-top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-us__title {
+  .title();
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.about-us__description {
+  margin: 0;
+  font-weight: 400;
+  padding-top: 32px;
+}
+
+.about-us__head {
+  .title();
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 40px;
+}
+
+.about-us__list {
+  .list();
+}
+
+.about-us__item {
+  font-weight: 400;
+  color: @dark-blue;
+  padding-left: 37px;
+  padding-top: 24px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: @red;
+    position: absolute;
+    left: 1px;
+    bottom: 10px;
+  }
+}
+
+.about-us__stats {
+  width: 360px;
+  background-image: url("../img/nerds-illustration.png");
+  background-repeat: no-repeat;
+  background-size: 360px 208px;
+  background-position: top right;
+  padding-top: 203px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-us__table {
+  padding-top: 40px;
+}
+
+.about-us__table tr {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 65px;
+}
+
+.about-us__table td {
+  width: 33%;
+  padding: 0;
+}
+
+.about-us__percent {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+}
+
+.about-us__percent sup {
+ font-size: 25px;
+ padding-bottom: 30px;
+}
+
+.about-us__field {
+  line-height: 18px;
+  font-weight: 400;
+  padding-top: 35px;
+}

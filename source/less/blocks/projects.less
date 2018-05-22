@@ -1,0 +1,33 @@
+.projects__list {
+  .list();
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects__item {
+  width: 260px;
+  vertical-align: middle;
+}
+
+.projects__link {
+  .link();
+  opacity: 0.2;
+  text-align: center;
+
+  &:hover {
+    .trans();
+    opacity: 1;
+  }
+
+  &:active {
+    .trans();
+    opacity: 0.1;
+  }
+}
+
+.projects__link img {
+  text-align: center;
+}
