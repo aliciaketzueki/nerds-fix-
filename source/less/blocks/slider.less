@@ -7,7 +7,8 @@
 
 .slider__item {
   min-height: 430px;
-  padding: 80px 0;
+  padding-bottom: 80px;
+  padding-top: 75px;
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -21,10 +22,11 @@
   left: 0;
   z-index: 1;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 1.2s;
 
   &:nth-of-type(1) {
     background-image: url("../img/slide1.png");
+    background-position: bottom right 30px;
   }
 
   &:nth-of-type(2) {
@@ -52,6 +54,7 @@
   color: #283136;
   margin: 0;
   padding-right: 740px;
+  padding-bottom: 12px;
 }
 
 .slider__link {
