@@ -4,6 +4,7 @@
 
 .header__nav {
   min-height: 115px;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -38,6 +39,10 @@
 
 .header__item {
   padding-right: 45px;
+  min-height: 115px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .header__link {
@@ -49,6 +54,8 @@
   &--active {
     border-bottom: 2px solid @red;
     padding-bottom: 3px;
+    margin-bottom: 5px;
+    
   }
 
   &--cart {
