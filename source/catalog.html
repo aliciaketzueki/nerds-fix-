@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Nerds</title>
   </head>
   <body>
@@ -41,62 +41,62 @@
       <header class="main__header main-header">
         <h2 class="main-header__title">Магазин готовых шаблонов</h2>
       </header>
-      <div class="page-wrapper">
+      <div class="page-wrapper page-wrapper--form">
         <section class="main__form form">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form class="form__form-field" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset>
-              <div class="form__range">
-                <button class="form__range-button form__range-button--min" type="button">min</button>
-                <button class="form__range-button form__range-button--max" type="button">max</button>
+            <fieldset class="form__block">
+              <legend class="form__title">Стоимость:</legend>
+              <div class="form__range-block">
+                <button class="form__range-button form__range-button--min" type="button"></button>
+                <button class="form__range-button form__range-button--max" type="button"></button>
               </div>
               <div class="form__cost">
-                <legend class="form__title">Стоимость:</legend>
-                <label class="form__label" for="from">От</label>
-                <input type="number" name="cost-from" id="from" value="0">
-                <label class="form__label" for="to">До</label>
-                <input type="number" name="cost-to" id="to" value="15000">
+                <label class="form__label form__label--cost" for="from">От</label>
+                <input class="form__input-cost" type="number" name="cost-from" id="from" value="0">
+                <label class="form__label form__label--cost" for="to">До</label>
+                <input class="form__input-cost" type="number" name="cost-to" id="to" value="15000">
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="form__block form__block--radio">
               <legend class="form__title">Сетка:</legend>
               <ul class="form__list">
                 <li class="form__item">
                   <input class="form__radio" type="radio" name="grid" id="adaptive" checked>
-                  <label class="form__label" for="adaptive">Адаптивная</label>
+                  <label class="form__label form__label--radio" for="adaptive">Адаптивная</label>
                 </li>
                 <li class="form__item">
                   <input class="form__radio" type="radio" name="grid" id="fix">
-                  <label class="form__label" for="fix">Фиксированная</label>
+                  <label class="form__label form__label--radio" for="fix">Фиксированная</label>
                 </li>
                 <li class="form__item">
                   <input class="form__radio" type="radio" name="grid" id="resp">
-                  <label class="form__label" for="resp">Резиновая</label>
+                  <label class="form__label form__label--radio" for="resp">Резиновая</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="form__block form__block--checkbox">
               <legend class="form__title">Особенности:</legend>
               <ul class="form__list">
                 <li class="form__item">
                   <input class="form__checkbox" type="checkbox" name="slider" id="slider" checked>
-                  <label class="form__label" for="slider">Слайдер</label>
+                  <label class="form__label form__label--checkbox" for="slider">Слайдер</label>
                 </li>
                 <li class="form__item">
                   <input class="form__checkbox" type="checkbox" name="advantages" id="advantages">
-                  <label class="form__label" for="advantages">Блок преимуществ</label>
+                  <label class="form__label form__label--checkbox" for="advantages">Блок преимуществ</label>
                 </li>
                 <li class="form__item">
                   <input class="form__checkbox" type="checkbox" name="news" id="news" checked>
-                  <label class="form__label" for="news">Новости</label>
+                  <label class="form__label form__label--checkbox" for="news">Новости</label>
                 </li>
                 <li class="form__item">
                   <input class="form__checkbox" type="checkbox" name="gallery" id="gallery">
-                  <label class="form__label" for="gallery">Галерея</label>
+                  <label class="form__label form__label--checkbox" for="gallery">Галерея</label>
                 </li>
                 <li class="form__item">
                   <input class="form__checkbox" type="checkbox" name="cart" id="cart">
-                  <label class="form__label" for="cart">Корзина</label>
+                  <label class="form__label form__label--checkbox" for="cart">Корзина</label>
                 </li>
               </ul>
             </fieldset>
@@ -106,10 +106,10 @@
         <section class="main__products products">
           <h2 class="visually-hidden">Блок товаров</h2>
           <div class="products__sort sort">
-            <p>Сортировать:</p>
+            <h3 class="sort__title">Сортировать:</h3>
             <ul class="sort__list">
               <li class="sort__item">
-                <a class="sort__link" href="#">По цене</a>
+                <a class="sort__link sort__link--active">По цене</a>
               </li>
               <li class="sort__item">
                 <a class="sort__link" href="#">По типу</a>
@@ -118,8 +118,16 @@
                 <a class="sort__link" href="#">По названию</a>
               </li>
               <li class="sort__item">
-                <button class="sort__button sort__button-min" type="button">вверх</button>
-                <button class="sort__button sort__button-max" type="button">вниз</button>
+                <button class="sort__button sort__button--active" type="button">
+                  <svg width="11" height="10">
+                    <use xlink:href="img/sprite.svg#icon-down-dir"></use>
+                  </svg>
+                </button>
+                <button class="sort__button" type="button">
+                  <svg width="11" height="10">
+                    <use xlink:href="img/sprite.svg#icon-up-dir"></use>
+                  </svg>
+                </button>
               </li>
             </ul>
           </div>
@@ -127,51 +135,81 @@
             <h3 class="visually-hidden">Список товаров</h3>
             <ul class="products__list">
               <li class="products__item">
-                <a class="products__link" href="#">Sedona</a>
+                <a class="products__link" href="https://aliciaketzueki.github.io/sedona%20(fix)/">
+                  <svg width="360" height="40">
+                    <use xlink:href="img/sprite.svg#browser"></use>
+                  </svg>
+                  <img class="products__img" src="img/img-sedona.jpg" width="360" height="576" alt="Макет сайта Sedona">
+                </a>
                 <div class="products__product">
                   <h4 class="products__name">Sedona</h4>
-                  <p class="products__description">Информационный сайт для туристов</p>
+                  <p class="products__description">Информационный сайт для&nbsp;туристов</p>
                   <button class="products__cost" type="button">9 900 руб.</button>
                 </div>
               </li>
               <li class="products__item">
-                <a class="products__link" href="#">Pink</a>
+                <a class="products__link" href="#">
+                  <svg width="360" height="40">
+                    <use xlink:href="img/sprite.svg#browser"></use>
+                  </svg>
+                  <img class="products__img" src="img/img-pink.jpg" width="360" height="576" alt="Макет сайта Pink">
+                </a>
                 <div class="products__product">
-                  <h4 class="products__name">Pink</h4>
-                  <p class="products__description">Сайт приложения</p>
-                  <button class="products__cost" type="button">11 000 руб.</button>
+                  <h4 class="products__name">Pink app</h4>
+                  <p class="products__description">Продуктовый лендинг приложения для iOS и Android</p>
+                  <button class="products__cost" type="button">9 900 руб.</button>
                 </div>
               </li>
               <li class="products__item">
-                <a class="products__link" href="#">Barbershop "Borodinski"</a>
+                <a class="products__link" href="#">
+                  <svg width="360" height="40">
+                    <use xlink:href="img/sprite.svg#browser"></use>
+                  </svg>
+                  <img class="products__img" src="img/img-barbershop.jpg" width="360" height="576" alt="Макет сайта Barbershop">
+                </a>
                 <div class="products__product">
                   <h4 class="products__name">Barbershop</h4>
-                  <p class="products__description">Сайт парикмахерской для бородачей</p>
-                  <button class="products__cost" type="button">8 500 руб.</button>
+                  <p class="products__description">Сайт салоны красоты. Для&nbsp;мужчин, да.</p>
+                  <button class="products__cost" type="button">9 900 руб.</button>
                 </div>
               </li>
               <li class="products__item">
-                <a class="products__link" href="#">Mishka</a>
+                <a class="products__link" href="https://aliciaketzueki.github.io/mishka%20(adaptive)/index.html">
+                  <svg width="360" height="40">
+                    <use xlink:href="img/sprite.svg#browser"></use>
+                  </svg>
+                  <img class="products__img" src="img/img-mishka.jpg" width="360" height="576" alt="Макет сайта Mishka">
+                </a>
                 <div class="products__product">
                   <h4 class="products__name">Mishka</h4>
-                  <p class="products__description">Магазин изделий ручной работы</p>
-                  <button class="products__cost" type="button">13 500 руб.</button>
+                  <p class="products__description">Интернет-магазин вязаных&nbsp;игрушек</p>
+                  <button class="products__cost" type="button">9 900 руб.</button>
                 </div>
               </li>
               <li class="products__item">
-                <a class="products__link" href="#">Study</a>
+                <a class="products__link" href="#">
+                  <svg width="360" height="40">
+                    <use xlink:href="img/sprite.svg#browser"></use>
+                  </svg>
+                  <img class="products__img" src="img/img-aplus.jpg" width="360" height="576" alt="Макет сайта Aplus">
+                </a>
                 <div class="products__product">
-                  <h4 class="products__name">Study</h4>
-                  <p class="products__description">Сайт курсов для обучения</p>
-                  <button class="products__cost" type="button">12 000 руб.</button>
+                  <h4 class="products__name">A Plus</h4>
+                  <p class="products__description">Лендинг курсов повышения квалификации</p>
+                  <button class="products__cost" type="button">9 900 руб.</button>
                 </div>
               </li>
               <li class="products__item">
-                <a class="products__link" href="#">Drink</a>
+                <a class="products__link" href="#">
+                  <svg width="360" height="40">
+                    <use xlink:href="img/sprite.svg#browser"></use>
+                  </svg>
+                  <img class="products__img" src="img/img-kvast.jpg" width="360" height="576" alt="Макет сайта Kvast">
+                </a>
                 <div class="products__product">
-                  <h4 class="products__name">Квас</h4>
-                  <p class="products__description">Магазин крафтового кваса</p>
-                  <button class="products__cost" type="button">11 200 руб.</button>
+                  <h4 class="products__name">Кваст</h4>
+                  <p class="products__description">Промо-сайт производителя крафтового кваса</p>
+                  <button class="products__cost" type="button">9 900 руб.</button>
                 </div>
               </li>
             </ul>
@@ -179,7 +217,7 @@
           <div class="products__pages pages">
             <ul class="pages__list">
               <li class="pages__item">
-                <a class="pages__link" href="#">1</a>
+                <a class="pages__link pages__link--active">1</a>
               </li>
               <li class="pages__item">
                 <a class="pages__link" href="#">2</a>
@@ -258,7 +296,7 @@
               <label class="modal__label" for="email">Ваш e-mail:</label>
               <input class="modal__input" type="email" name="email" id="email" placeholder="email@example.com" required>
             </li>
-            <li class="modal__item">
+            <li class="modal__item modal__item--text">
               <label class="modal__label" for="text">Текст письма:</label>
               <textarea class="modal__textarea" name="text" id="text" placeholder="В свободной форме" required></textarea>
             </li>
@@ -266,8 +304,10 @@
           <button class="modal__button" type="submit">Отправить</button>
         </form>
       </section>
+      <div id="slider"></div>
     </footer>
-    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/svgxuse.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAFpk8cXb_9F7bdJnh3YFeoJW1VQr8f6U&callback=initMap"></script>
   </body>
 </html>
