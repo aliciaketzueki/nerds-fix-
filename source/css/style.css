@@ -500,7 +500,7 @@ img {
 .map__button {
   width: 240px;
   border: 2px solid #fb565a;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 14px 0;
   box-sizing: border-box;
   text-align: center;
@@ -692,7 +692,7 @@ img {
 .modal__button {
   width: 240px;
   border: 2px solid #fb565a;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 14px 0;
   box-sizing: border-box;
   text-align: center;
@@ -779,7 +779,7 @@ img {
   color: black;
   width: 240px;
   border: 2px solid #fb565a;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 14px 0;
   box-sizing: border-box;
   text-align: center;
@@ -848,7 +848,7 @@ img {
 .pricelist__button {
   width: 240px;
   border: 2px solid #fb565a;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 14px 0;
   box-sizing: border-box;
   text-align: center;
@@ -1142,7 +1142,7 @@ img {
 .form__button {
   width: 240px;
   border: 2px solid #fb565a;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 14px 0;
   box-sizing: border-box;
   text-align: center;
@@ -1170,7 +1170,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 55px;
 }
 .products__item {
   position: relative;
@@ -1243,7 +1243,7 @@ img {
 .products__cost {
   width: 240px;
   border: 2px solid #fb565a;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 14px 0;
   box-sizing: border-box;
   text-align: center;
@@ -1338,4 +1338,79 @@ img {
 .sort__button:active svg {
   transition-duration: 0.5s;
   fill: #231f20;
+}
+.pages {
+  margin-top: 25px;
+}
+.pages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.pages__item {
+  margin-right: 11px;
+}
+.pages__link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font: inherit;
+  height: 50px;
+  width: 50px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #eeeeee;
+  text-align: center;
+  border: 3px solid #eeeeee;
+  border-radius: 3px;
+}
+.pages__link--active {
+  background-color: white;
+}
+.pages__link:hover {
+  transition-duration: 0.5s;
+  background-color: #dfdfdf;
+  border: none;
+}
+.pages__link:active {
+  transition-duration: 0.5s;
+  background-color: #d5d5d5;
+  box-shadow: inset 0px 3px 0px 0px #bfbfbf;
+  color: rgba(0, 0, 0, 0.3);
+}
+.pages__button {
+  border: 0;
+  background-color: white;
+  padding: 0;
+  width: 260px;
+  height: 50px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  color: black;
+  background-color: #eeeeee;
+  border: 3px solid #eeeeee;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.pages__button:hover {
+  transition-duration: 0.5s;
+  background-color: #dfdfdf;
+  border: none;
+}
+.pages__button:active {
+  transition-duration: 0.5s;
+  background-color: #d5d5d5;
+  box-shadow: inset 0px 3px 0px 0px #bfbfbf;
+  color: rgba(0, 0, 0, 0.3);
+}
+.pages__button:focus {
+  outline: none;
 }
