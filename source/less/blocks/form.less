@@ -24,7 +24,7 @@
   text-transform: uppercase;
 }
 
-.form__range {
+.form__range-block {
   height: 80px;
   width: 100%;
   margin-top: 48px;
@@ -32,12 +32,53 @@
   border: 2px solid @grey;
   border-radius: 2px;
   box-sizing: border-box;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 149px;
+    background-color: @green;
+    position: absolute;
+    z-index: 1;
+    top: 39px;
+    left: 21px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 69px;
+    background-color: #d7dcde;
+    position: absolute;
+    z-index: 1;
+    top: 39px;
+    right: 21px
+  }
 }
 
 .form__range-button {
   .button();
+  background-image: url("../img/filter-button.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 23px;
   background-color: transparent;
   cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+
+  &--min {
+    left: 18px;
+  }
+
+  &--max {
+    right: 80px;
+  }
 }
 
 .form__cost {
@@ -55,10 +96,21 @@
   background-color: @grey;
   border: 2px solid @grey;
   border-radius: 3px;
+  text-align: center;
 
   &:first-of-type {
     margin-right: auto;
   }
+}
+
+.form__label--cost + input[type="number"]::-webkit-outer-spin-button,
+.form__label--cost + input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form__label + input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .form__list {

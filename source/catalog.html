@@ -47,17 +47,9 @@
           <form class="form__form-field" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="form__block">
               <legend class="form__title">Стоимость:</legend>
-              <div class="form__range">
-                <button class="form__range-button form__range-button--min" type="button">
-                  <svg width="20" height="23">
-                    <use xlink:href="img/sprite.svg#filter-button"></use>
-                  </svg>
-                </button>
-                <button class="form__range-button form__range-button--max" type="button">
-                  <svg width="20" height="23">
-                    <use xlink:href="img/sprite.svg#filter-button"></use>
-                  </svg>
-                </button>
+              <div class="form__range-block">
+                <button class="form__range-button form__range-button--min" type="button"></button>
+                <button class="form__range-button form__range-button--max" type="button"></button>
               </div>
               <div class="form__cost">
                 <label class="form__label form__label--cost" for="from">От</label>
@@ -312,8 +304,10 @@
           <button class="modal__button" type="submit">Отправить</button>
         </form>
       </section>
+      <div id="slider"></div>
     </footer>
-    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/svgxuse.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAFpk8cXb_9F7bdJnh3YFeoJW1VQr8f6U&callback=initMap"></script>
   </body>
 </html>
