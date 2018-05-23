@@ -57,7 +57,7 @@
   width: 360px;
   min-height: 231px;
   box-sizing: border-box;
-  padding: 40px 80px;
+  padding: 40px 60px;
   padding-top: 30px;
   position: absolute;
   bottom: 0;
@@ -86,6 +86,11 @@
   .main-button();
   width: 200px;
   cursor: pointer;
+  .interactive();
+
+  &:active {
+    color: rgba(255, 255, 255, 1);
+  }
 }
 
 @keyframes view {
