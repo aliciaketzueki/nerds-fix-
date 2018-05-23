@@ -1,6 +1,6 @@
 .map {
   background-color: #b5b5b5;
-  height: 416px;
+  min-height: 416px;
   overflow: hidden;
   position: relative;
 }
@@ -29,6 +29,7 @@
   background-color: white;
   width: 320px;
   min-height: 308px;
+  height: 308px;
   padding: 0 50px;
   padding-bottom: 47px;
   padding-top: 50px;
@@ -53,10 +54,12 @@
 
 .map__adds {
   margin: 0;
+  width: 100%;
 }
 
 .map__tel {
   margin: 0;
+  width: 100%;
 }
 
 .map__button {
@@ -65,4 +68,8 @@
   margin-top: 18px;
   cursor: pointer;
   .interactive();
+
+  & span {
+    position: relative;
+  }
 }
