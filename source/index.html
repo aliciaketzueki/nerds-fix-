@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/Roboto-Regular.ttf" as="font">
+    <link rel="preload" href="fonts/Roboto-Medium.ttf" as="font">
+    <link rel="preload" href="fonts/Roboto-Bold.ttf" as="font">
     <link rel="stylesheet" href="css/style.css">
     <title>Nerds</title>
   </head>
@@ -66,17 +69,17 @@
             <li class="pricelist__item">
               <h2 class="pricelist__title">Веб-сайты</h2>
               <p class="pricelist__description">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-              <button class="pricelist__button" type="button">Заказать</button>
+              <a class="pricelist__button" href="#">Заказать</a>
             </li>
             <li class="pricelist__item pricelist__item--green">
               <h2 class="pricelist__title">Приложения</h2>
               <p class="pricelist__description">Покорите топ-10 приложений в AppStore и Google Play</p>
-              <button class="pricelist__button pricelist__button--green" type="button">Заказать</button>
+              <a class="pricelist__button pricelist__button--green" href="#">Заказать</a>
             </li>
             <li class="pricelist__item pricelist__item--yellow">
               <h2 class="pricelist__title">Презентации</h2>
               <p class="pricelist__description">Вы даже не подозреваете, насколько вы изумительны!</p>
-              <button class="pricelist__button pricelist__button--yellow" type="button">Заказать</button>
+              <a class="pricelist__button pricelist__button--yellow" href="#">Заказать</a>
             </li>
           </ul>
         </section>
@@ -109,10 +112,10 @@
           </section>
         </section>
         <section class="main__projects projects">
-          <h1 class="visually-hidden">Наши работы</h1>
+          <h1 class="visually-hidden">Проекты</h1>
           <ul class="projects__list">
             <li class="projects__item">
-              <a class="projects__link" href="#">
+              <a class="projects__link" href="https://htmlacademy.ru/">
                 <img src="img/logo-1.png" width="199" height="68" alt="Html academy">
               </a>
             </li>
@@ -127,7 +130,7 @@
               </a>
             </li>
             <li class="projects__item">
-              <a class="projects__link" href="#">
+              <a class="projects__link" href="https://aliciaketzueki.github.io/mishka%20(adaptive)/index.html">
                 <img src="img/logo-4.png" width="173" height="84" alt="Mishka">
               </a>
             </li>
@@ -140,12 +143,12 @@
         <h2 class="visually-hidden">Карта</h2>
         <img class="map__img" src="img/map.png" width="1440" height="785" alt="Карта">
         <div class="map__container"></div>
-        <div class="page-wrapper">
+        <div class="page-wrapper map__wrapper">
           <section class="map__contacts">
             <h3 class="map__title">Nёrds design studio</h3>
             <p class="map__adds">191186, Санкт-Петербург, ул.&nbsp;Б. Конюшенная, д. 19/8</p>
             <p class="map__tel">тел. +7 (812) 275-75-75</p>
-            <button class="map__button" type="button">Напишите нам</button>
+            <button class="map__button" type="button"><span>Напишите нам</span></button>
           </section>
         </div>
       </section>
@@ -192,18 +195,18 @@
           <ul class="modal__list">
             <li class="modal__item">
               <label class="modal__label" for="name">Ваше имя:</label>
-              <input class="modal__input" type="name" name="name" id="name" placeholder="Имя Фамилия" required>
+              <input class="modal__input" type="name" name="login" id="name" placeholder="Имя Фамилия">
             </li>
             <li class="modal__item">
               <label class="modal__label" for="email">Ваш e-mail:</label>
-              <input class="modal__input" type="email" name="email" id="email" placeholder="email@example.com" required>
+              <input class="modal__input" type="email" name="email" id="email" placeholder="email@example.com">
             </li>
             <li class="modal__item modal__item--text">
               <label class="modal__label" for="text">Текст письма:</label>
-              <textarea class="modal__textarea" name="text" id="text" placeholder="В свободной форме" required></textarea>
+              <textarea class="modal__textarea" name="text" id="text" placeholder="В свободной форме"></textarea>
             </li>
           </ul>
-          <button class="modal__button" type="submit">Отправить</button>
+          <button class="modal__button" type="submit"><span>Отправить</span></button>
         </form>
       </section>
     </footer>

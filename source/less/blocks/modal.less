@@ -54,7 +54,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
+  width: 760px;
 }
 
 .modal__item {
@@ -89,6 +89,10 @@
     outline: none;
     border-color: #000000;
   }
+
+  &:invalid {
+    border-color: #e74246;
+  }
 }
 
 .modal__textarea {
@@ -110,6 +114,10 @@
     outline: none;
     border-color: #000000;
   }
+
+  &:invalid {
+    border-color: #e74246;
+  }
 }
 
 .modal__button {
@@ -118,4 +126,8 @@
   width: 260px;
   cursor: pointer;
   .interactive();
+
+  & span {
+    position: relative;
+  }
 }
