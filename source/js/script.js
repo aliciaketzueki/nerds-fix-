@@ -25,14 +25,55 @@ function initMap() {
 
 var button = document.querySelector(".map__button");
 var modal = document.querySelector(".modal");
-var closeButton = document.querySelector(".modal__close");
+var closeButton = modal.querySelector(".modal__close");
+var login = modal.querySelector("[name=login]");
+var email = modal.querySelector("[name=email]");
+var text = modal.querySelector("[name=text]");
+var form = modal.querySelector("form");
+
+var isStorageSupport = true;
+var storage = "";
+
+try {
+  storage = localStorage.getItem("login");
+} catch (err) {
+  isStorageSupport = false;
+}
 
 button.addEventListener("click", function(evt) {
-  evt.preventDefault;
+  evt.preventDefault();
   modal.classList.add("modal--show");
+  login.focus();
+
+  if (storage) {
+    login.value = storage;
+    email.focus();
+  } else {
+    login.focus();
+  }
 });
 
 closeButton.addEventListener("click", function(evt) {
-  evt.preventDefault;
+  evt.preventDefault();
   modal.classList.remove("modal--show");
+});
+
+form.addEventListener("submit", function(evt) {
+  if (!login.value || !email.value || !text.value) {
+    evt.preventDefault();
+    console.log("Пожалуйста, заполните все поля");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("login", login.value);
+    }
+  }
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (modal.classList.contains("modal--show")) {
+      modal.classList.remove("modal--show");
+    }
+  }
 });
