@@ -6,7 +6,7 @@
     <link rel="preload" href="fonts/Roboto-Regular.ttf" as="font">
     <link rel="preload" href="fonts/Roboto-Medium.ttf" as="font">
     <link rel="preload" href="fonts/Roboto-Bold.ttf" as="font">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Nerds</title>
   </head>
   <body>
@@ -142,7 +142,10 @@
                   <svg width="360" height="40">
                     <use xlink:href="img/sprite.svg#browser"></use>
                   </svg>
-                  <img class="products__img" src="img/img-sedona.jpg" width="360" height="576" alt="Макет сайта Sedona">
+                  <picture>
+                    <source type="image/webp" srcset="img/img-sedona.webp">
+                    <img class="products__img" src="img/img-sedona.jpg" width="360" height="576" alt="Макет сайта Sedona">
+                  </picture>
                 </a>
                 <div class="products__product">
                   <h4 class="products__name">Sedona</h4>
@@ -155,7 +158,10 @@
                   <svg width="360" height="40">
                     <use xlink:href="img/sprite.svg#browser"></use>
                   </svg>
-                  <img class="products__img" src="img/img-pink.jpg" width="360" height="576" alt="Макет сайта Pink">
+                  <picture>
+                    <source type="image/webp" srcset="img/img-pink.webp">
+                    <img class="products__img" src="img/img-pink.jpg" width="360" height="576" alt="Макет сайта Pink">
+                  </picture>
                 </a>
                 <div class="products__product">
                   <h4 class="products__name">Pink app</h4>
@@ -168,7 +174,10 @@
                   <svg width="360" height="40">
                     <use xlink:href="img/sprite.svg#browser"></use>
                   </svg>
-                  <img class="products__img" src="img/img-barbershop.jpg" width="360" height="576" alt="Макет сайта Barbershop">
+                  <picture>
+                    <source type="image/webp" srcset="img/img-barbershop.webp">
+                    <img class="products__img" src="img/img-barbershop.jpg" width="360" height="576" alt="Макет сайта Barbershop">
+                  </picture>
                 </a>
                 <div class="products__product">
                   <h4 class="products__name">Barbershop</h4>
@@ -181,7 +190,10 @@
                   <svg width="360" height="40">
                     <use xlink:href="img/sprite.svg#browser"></use>
                   </svg>
-                  <img class="products__img" src="img/img-mishka.jpg" width="360" height="576" alt="Макет сайта Mishka">
+                  <picture>
+                    <source type="image/webp" srcset="img/img-mishka.webp">
+                    <img class="products__img" src="img/img-mishka.jpg" width="360" height="576" alt="Макет сайта Mishka">
+                  </picture>
                 </a>
                 <div class="products__product">
                   <h4 class="products__name">Mishka</h4>
@@ -194,7 +206,10 @@
                   <svg width="360" height="40">
                     <use xlink:href="img/sprite.svg#browser"></use>
                   </svg>
-                  <img class="products__img" src="img/img-aplus.jpg" width="360" height="576" alt="Макет сайта Aplus">
+                  <picture>
+                    <source type="image/webp" srcset="img/img-aplus.webp">
+                    <img class="products__img" src="img/img-aplus.jpg" width="360" height="576" alt="Макет сайта Aplus">
+                  </picture>
                 </a>
                 <div class="products__product">
                   <h4 class="products__name">A Plus</h4>
@@ -207,7 +222,10 @@
                   <svg width="360" height="40">
                     <use xlink:href="img/sprite.svg#browser"></use>
                   </svg>
-                  <img class="products__img" src="img/img-kvast.jpg" width="360" height="576" alt="Макет сайта Kvast">
+                  <picture>
+                    <source type="image/webp" srcset="img/img-kvast.webp">
+                    <img class="products__img" src="img/img-kvast.jpg" width="360" height="576" alt="Макет сайта Kvast">
+                  </picture>
                 </a>
                 <div class="products__product">
                   <h4 class="products__name">Кваст</h4>
@@ -239,14 +257,19 @@
     <footer class="footer">
       <section class="footer__map map">
         <h2 class="visually-hidden">Карта</h2>
-        <img class="map__img" src="img/map.png" width="1440" height="785" alt="Карта">
+        <picture>
+          <source type="image/webp" srcset="img/map.webp">
+          <img class="map__img" src="img/map.png" width="1440" height="785" alt="Карта">
+        </picture>
         <div class="map__container"></div>
-        <div class="page-wrapper">
+        <div class="page-wrapper map__wrapper">
           <section class="map__contacts">
             <h3 class="map__title">Nёrds design studio</h3>
             <p class="map__adds">191186, Санкт-Петербург, ул.&nbsp;Б. Конюшенная, д. 19/8</p>
             <p class="map__tel">тел. +7 (812) 275-75-75</p>
-            <button class="map__button" type="button"><span>Напишите нам</span></button>
+            <button class="map__button" type="button">
+              <span>Напишите нам</span>
+            </button>
           </section>
         </div>
       </section>
@@ -293,7 +316,7 @@
           <ul class="modal__list">
             <li class="modal__item">
               <label class="modal__label" for="name">Ваше имя:</label>
-              <input class="modal__input" type="name" name="login" id="name" placeholder="Имя Фамилия">
+              <input class="modal__input" type="text" name="login" id="name" placeholder="Имя Фамилия">
             </li>
             <li class="modal__item">
               <label class="modal__label" for="email">Ваш e-mail:</label>
@@ -310,8 +333,7 @@
         </form>
       </section>
     </footer>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/svgxuse.js"></script>
+    <script src="js/mainjs.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAFpk8cXb_9F7bdJnh3YFeoJW1VQr8f6U&callback=initMap"></script>
   </body>
 </html>
