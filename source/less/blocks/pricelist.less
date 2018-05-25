@@ -6,18 +6,8 @@
   padding-right: 60px;
 }
 
-.pricelist__item {
-  width: 300px;
-  min-height: 347px;
-  padding-top: 146px;
-  box-sizing: border-box;
+.no-webp .pricelist__item {
   background-image: url("../img/illustration-1.png");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 300px 146px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 
   &--green {
     background-image: url("../img/illustration-2.png");
@@ -26,6 +16,31 @@
   &--yellow {
     background-image: url("../img/illustration-3.png");
   }
+}
+
+.webp .pricelist__item {
+  background-image: url("../img/illustration-1.webp");
+
+  &--green {
+    background-image: url("../img/illustration-2.webp");
+  }
+
+  &--yellow {
+    background-image: url("../img/illustration-3.webp");
+  }
+}
+
+.pricelist__item {
+  width: 300px;
+  min-height: 347px;
+  padding-top: 146px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 300px 146px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .pricelist__title {
