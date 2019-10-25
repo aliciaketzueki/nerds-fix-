@@ -1,57 +1,61 @@
 {
-  "name": "nerds",
+  "name": "forward-electronic",
   "version": "1.0.0",
-  "description": "nerds",
+  "description": "description",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aliciaketzueki/Nerds.git"
+    "url": "git+https://github.com/aliciaketzueki/forward-electronic.git"
   },
   "keywords": [
-    "nerds"
+    "keyword"
   ],
   "author": "aliciaketzueki",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aliciaketzueki/Nerds/issues"
+    "url": "https://github.com/aliciaketzueki/forward-electronic/issues"
   },
-  "homepage": "https://github.com/aliciaketzueki/Nerds#readme",
+  "homepage": "https://github.com/aliciaketzueki/forward-electronic#readme",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
-    "autoprefixer": "^8.5.0",
-    "browser-sync": "^2.24.4",
+    "autoprefixer": "^9.3.1",
+    "browser-sync": "^2.26.3",
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
+    "eslint": "^5.8.0",
+    "eslint-config-htmlacademy": "^0.5.2",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
-    "gulp-htmlmin": "^4.0.0",
-    "gulp-imagemin": "^4.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-less": "^4.0.1",
     "gulp-plumber": "^1.2.0",
-    "gulp-postcss": "^7.0.1",
-    "gulp-rename": "^1.2.3",
-    "gulp-svgstore": "^6.1.1",
-    "gulp-uglify": "^3.0.0",
-    "gulp-webp": "^3.0.0",
-    "ion-rangeslider": "^2.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-stylelint": "^8.0.0",
+    "gulp-svgstore": "^7.0.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-webp": "^4.0.1",
+    "normalize.less": "^1.0.0",
+    "posthtml-include": "^1.2.0",
+    "pump": "^3.0.0",
     "run-sequence": "^2.2.1",
-    "stylelint": "^9.2.1",
+    "stylelint": "^9.7.0",
     "stylelint-config-htmlacademy": "^0.1.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-    "test": "npm run editorconfig && npm run stylelint",
+    "eslint": "eslint \"source/js/**/*.js\"",
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
     "build": "gulp build",
-    "start": "npm run build && gulp serve"
+    "start": "gulp serve"
   },
   "editorconfig-cli": [
     "source/*.html",
-    "source/js/**/script.js",
+    "source/js/**/*.js",
     "source/less/**/*.less"
   ],
-  "dependencies": {
-    "gulp-less": "^3.5.0",
-    "normalize.less": "^1.0.0",
-    "pump": "^3.0.0"
-  }
+  "dependencies": {}
 }
